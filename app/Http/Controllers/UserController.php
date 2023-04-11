@@ -16,8 +16,10 @@ class UserController extends Controller
     {
         $id = Auth::id();
         $contacts = DB::table('contacts')->where('user_id', $id)->orderBy('first_name', 'asc')->get();
-        return view('home', ['contacts' => $contacts]);
+        $total = $contacts->count();
+        return view('home', compact('contacts','total'));
     }
+
     public function registationForm()
     {
         return view('register');
@@ -60,6 +62,11 @@ class UserController extends Controller
             ->withErrors(['email' => 'Invalid email or password.'])
             ->withInput();
 
+    }
+
+    public function profile()
+    {
+        return view('profile');
     }
 
     public function logout()

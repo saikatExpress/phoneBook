@@ -3,6 +3,10 @@
     <div class="container">
 
         <h2 style="text-align:center">Contact List</h2>
+        <div class="new_div">
+            <a class="btn btn-primary btn-sm btn-primary" href="{{ route('contact') }}">Add New Contact</a>
+            <button class="btn btn-primary btn-sm btn-info">Contact({{ $total }})</button>
+        </div>
         @if (session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}

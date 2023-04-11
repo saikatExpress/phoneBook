@@ -44,11 +44,29 @@ p {
     display: flex;
     list-style: none;
     justify-content: space-evenly;
-    margin-top: 10px;
+    margin-top: 13px;
 }
 
 .logo_image {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    margin: 5px;
+}
+
+.header_menu a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.4s;
+}
+
+.header_menu a:hover {
+    color: aqua;
+}
+
+.new_div {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

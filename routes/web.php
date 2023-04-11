@@ -36,6 +36,10 @@ Route::middleware(['auth'])->group(function () {
         return view('contact');
     })->name('contact');
 
+    //For user profile
+    Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+
+    //For contact
     Route::post('/create/contact', [ContactController::class, 'createContact'])->name('create.contact');
     Route::get('/edit/contact/{id}', [ContactController::class, 'showContact'])->name('edit.contact');
     Route::post('/edit/contact/{id}', [ContactController::class, 'update'])->name('update.contact');
