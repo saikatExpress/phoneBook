@@ -1,7 +1,13 @@
 @extends('master')
 @section('content')
     <div class="container">
+
         <h2 style="text-align:center">Contact List</h2>
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         <table class="table table-striped table-dark">
             <thead>
                 <tr>
@@ -14,39 +20,24 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Keranigonj</td>
-                    <td>
-                        <a class="btn btn-primary btn-sm" href="">Edit</a>
-                        <a class="btn btn-primary btn-sm btn-danger" href="">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>Keranigonj</td>
-                    <td>
-                        <a class="btn btn-primary btn-sm" href="">Edit</a>
-                        <a class="btn btn-primary btn-sm btn-danger" href="">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    <td>Keranigonj</td>
-                    <td>
-                        <a class="btn btn-primary btn-sm" href="">Edit</a>
-                        <a class="btn btn-primary btn-sm btn-danger" href="">Delete</a>
-                    </td>
-                </tr>
+                <?php $sl = 1; ?>
+                @foreach ($contacts as $contact)
+                    <tr>
+                        <th scope="row">{{ $sl++ }}</th>
+                        <td>{{ $contact->first_name }}</td>
+                        <td>{{ $contact->last_name }}</td>
+                        <td>{{ $contact->phone_number }}</td>
+                        <td>{{ $contact->address }}</td>
+                        <td>
+                            <a class="btn btn-primary btn-sm"
+                                href="{{ route('edit.contact', Crypt::encryptString($contact->id)) }}">Edit</a>
+                            <a class="btn btn-primary btn-sm btn-success"
+                                href="{{ route('view.contact', Crypt::encryptString($contact->id)) }}">View</a>
+                            <a class="btn btn-primary btn-sm btn-danger"
+                                href="{{ route('delete.contact', Crypt::encryptString($contact->id)) }}">Delete</a>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

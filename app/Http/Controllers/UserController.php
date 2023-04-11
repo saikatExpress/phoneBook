@@ -12,6 +12,12 @@ use Illuminate\Validation\Rules\Password;
 
 class UserController extends Controller
 {
+    public function index()
+    {
+        $id = Auth::id();
+        $contacts = DB::table('contacts')->where('user_id', $id)->orderBy('first_name', 'asc')->get();
+        return view('home', ['contacts' => $contacts]);
+    }
     public function registationForm()
     {
         return view('register');
