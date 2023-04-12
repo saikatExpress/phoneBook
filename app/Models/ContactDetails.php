@@ -18,6 +18,7 @@ class ContactDetails extends Model
         'mother_name',
         'email',
         'job_title',
+        'description',
         'created_at',
         'updated_at',
         'deleted_at'
@@ -32,6 +33,7 @@ class ContactDetails extends Model
         'mother_name'   => 'string',
         'email'         => 'string',
         'job_title'     => 'string',
+        'description'   => 'string',
         'created_at'    => 'datetime',
         'updated_at'    => 'datetime',
         'deleted_at'    => 'datetime'

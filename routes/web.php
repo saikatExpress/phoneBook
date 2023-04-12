@@ -47,5 +47,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/delete/contact/{id}', [ContactController::class, 'delete'])->name('delete.contact');
     Route::get('/view/contact/{id}', [ContactController::class, 'show'])->name('view.contact');
 
+    Route::get('/contact/details/{id}', [ContactDetailController::class, 'contactDetail'])->name('contact.detail');
     Route::post('/contact/details/create', [ContactDetailController::class, 'contactDetailsCreate'])->name('contact.details');
 });
