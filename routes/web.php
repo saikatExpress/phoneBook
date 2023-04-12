@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ContactDetailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,4 +46,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/edit/contact/{id}', [ContactController::class, 'update'])->name('update.contact');
     Route::get('/delete/contact/{id}', [ContactController::class, 'delete'])->name('delete.contact');
     Route::get('/view/contact/{id}', [ContactController::class, 'show'])->name('view.contact');
+
+    Route::post('/contact/details/create', [ContactDetailController::class, 'contactDetailsCreate'])->name('contact.details');
 });

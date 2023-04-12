@@ -16,8 +16,8 @@
         <div class="col-sm-4">
             <ul class="myList">
                 @guest
-                    <li><a href="#">Register</a></li>
-                    <li><a href="{{ route('login') }}">Login</a></li>
+                    <li><a class="btn btn-primary btn-sm btn-warning" href="#">Register</a></li>
+                    <li><a class="btn btn-primary btn-sm btn-primary" href="{{ route('login') }}">Login</a></li>
                 @else
                     <li><a class="btn btn-primary btn-sm btn-secondary"
                             href="{{ route('profile') }}">{{ Auth::user()->name }}</a></li>

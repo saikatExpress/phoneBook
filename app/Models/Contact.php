@@ -30,4 +30,9 @@ class Contact extends Model
         'updated_at'   => 'datetime',
         'deleted_at'   => 'datetime'
     ];
+
+    public function contactDetails()
+    {
+        return $this->hasMany(ContactDetails::class, 'contact_id', 'id');
+    }
 }
