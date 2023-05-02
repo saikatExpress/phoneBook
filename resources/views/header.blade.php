@@ -7,7 +7,7 @@
             <div class="header_menu">
                 <ul class="myList">
                     <li><a href="/home">Home</a></li>
-                    <li><a href="">About</a></li>
+                    <li><a href="{{ route('about.us') }}">About</a></li>
                     <li><a href="{{ route('contact') }}">Contact</a></li>
                     <li><a href="">History</a></li>
                 </ul>
