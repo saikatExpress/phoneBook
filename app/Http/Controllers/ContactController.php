@@ -43,6 +43,12 @@ class ContactController extends Controller
         }
     }
 
+    //From user profile page comes this method
+    public function contactForm()
+    {
+      return view('contact');
+    }
+
     public function showContact($id)
     {
         $id = Crypt::decryptString($id);

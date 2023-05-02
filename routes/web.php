@@ -42,6 +42,8 @@ Route::middleware(['auth'])->group(function () {
 
     //For contact
     Route::post('/create/contact', [ContactController::class, 'createContact'])->name('create.contact');
+    //Contact form showing in user profile page
+    Route::get('/create/contact', [ContactController::class, 'contactForm'])->name('contact.form');
     Route::get('/edit/contact/{id}', [ContactController::class, 'showContact'])->name('edit.contact');
     Route::post('/edit/contact/{id}', [ContactController::class, 'update'])->name('update.contact');
     Route::get('/delete/contact/{id}', [ContactController::class, 'delete'])->name('delete.contact');

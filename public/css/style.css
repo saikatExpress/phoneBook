@@ -70,3 +70,41 @@ p {
     align-items: center;
     justify-content: space-between;
 }
+
+.profile_img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.text_style{
+  background-color: green;
+  padding: 12px 16px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text_style h2{
+  color: #fff;
+  font-size: 18px;
+}
+
+.contactList{
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contactList h4{
+  font-size: 20px;
+  padding: 5px 8px 5px;
+}
+
+.contactList h6{
+  font-size: 16px;
+  padding: 5px 8px 5px;
+}
+
+.contactList strong{
+  padding: 5px 8px 5px;
+}
