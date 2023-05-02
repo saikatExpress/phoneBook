@@ -71,40 +71,47 @@ p {
     justify-content: space-between;
 }
 
-.profile_img{
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+.profile_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
 
-.text_style{
-  background-color: green;
-  padding: 12px 16px 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.contactBox {
+    padding: 8px 10px 8px;
 }
 
-.text_style h2{
-  color: #fff;
-  font-size: 18px;
+.text_style {
+    background-color: green;
+    padding: 12px 16px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
 }
 
-.contactList{
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.text_style h2 {
+    color: #fff;
+    font-size: 18px;
 }
 
-.contactList h4{
-  font-size: 20px;
-  padding: 5px 8px 5px;
+.contactList {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgb(129, 121, 121);
 }
 
-.contactList h6{
-  font-size: 16px;
-  padding: 5px 8px 5px;
+.contactList h4 {
+    font-size: 20px;
+    padding: 2px 5px 2px;
 }
 
-.contactList strong{
-  padding: 5px 8px 5px;
+.contactList h6 {
+    font-size: 16px;
+    padding: 2px 5px 2px;
+}
+
+.contactList strong {
+    padding: 2px 5px 2px;
+    margin-bottom: 2px;
 }

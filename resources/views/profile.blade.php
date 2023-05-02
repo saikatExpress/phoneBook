@@ -6,7 +6,7 @@
           <div class="contactBox">
             <div class="text_style">
               <h2>Contacts</h2>
-              <a href="{{ route('contact.form') }}" class="btn btn-primary">Add New</a>
+              <a href="{{ route('contact.form') }}" class="btn btn-primary btn-sm">Add New</a>
             </div>
             <div class="contactArea">
 
