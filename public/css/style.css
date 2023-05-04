@@ -187,16 +187,17 @@ p {
 }
 
 .modal-content {
-    color: #aaaaaa;
+    /* color: #aaaaaa; */
     float: left;
-    font-size: 28px;
-    font-weight: bold;
+    /* font-size: 28px; */
+    /* font-weight: bold; */
     width: 50%;
     left: 32%;
 }
 
 .close {
     margin-left: 95%;
+    font-size: 25px;
 }
 
 .close:hover,
@@ -222,13 +223,13 @@ a:focus {
     text-decoration: none;
 }
 
-/* .form-control {
-    background: #212529;
+.form-control {
+    background: #fff;
     border-color: #545454;
-} */
+}
 
 .form-control:focus {
-    background: #212529;
+    background: #fff;
 }
 
 footer {
