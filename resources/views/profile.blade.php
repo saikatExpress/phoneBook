@@ -24,8 +24,7 @@
             <div class="col-sm-8">
                 <img class="profile_img" src="{{ asset('images/1.jpg') }}" alt="no image">
                 <h2>{{ Auth::user()->name }}</h2>
-                <button type="button" id="modalButton" name="button">Edit Profile</button>
-
+                <x-button text='Edit Profile'></x-button>
                 <div class="modalBody">
                     <div id="myModal" class="myModal">
                         <div class="modal-content">
@@ -65,9 +64,9 @@
                                 </div>
 
                                 <div class="form_view">
-                                    <button type="submit">Save</button>
+                                    {{-- <button type="submit">Save</button> --}}
+                                    <x-input-button></x-input-button>
                                 </div>
-
                             </form>
 
                         </div>
