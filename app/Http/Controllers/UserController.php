@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\UserDetail;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -78,12 +79,28 @@ class UserController extends Controller
 
     public function userDetails(Request $request)
     {
-        $image = $request->file('images');
+        $id = Auth::id();
+
+        $image      = $request->file('images');
         $fatherName = $request->input('father_name');
         $motherName = $request->input('mother_name');
-        $city = $request->input('city');
-        $town = $request->input('town');
-        $school = $request->input('school');
+        $city       = $request->input('city');
+        $town       = $request->input('town');
+        $school     = $request->input('school');
+
+        $imagePath = $image->store('images', 'public');
+
+        $userDetailModel = new UserDetail;
+
+        $userDetailModel->profile_images = $imagePath;
+        $userDetailModel->father_name    = $fatherName;
+        $userDetailModel->mother_name    = $motherName;
+        $userDetailModel->current_city   = $city;
+        $userDetailModel->home_town      = $town;
+        $userDetailModel->school         = $school;
+        $userDetailModel->user_id        = $id;
+
+        $userDetailModel->save();
     }
 
     public function logout()
