@@ -24,10 +24,10 @@ class UserSeeder extends Seeder
 
         while (($data = fgetcsv($csvFile, 2000, ',')) !== false) {
             if (!$firstLine) {
-                $userObj = new User;
-                $userObj->id = $data[0];
-                $userObj->name = $data[1];
-                $userObj->email = $data[2];
+                $userObj           = new User;
+                $userObj->id       = $data[0];
+                $userObj->name     = $data[1];
+                $userObj->email    = $data[2];
                 $userObj->password = $data[3];
 
                 $userObj->save();

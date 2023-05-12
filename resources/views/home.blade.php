@@ -48,14 +48,14 @@
                     </div>
                     <div class="new_div">
                         <a class="btn btn-primary btn-sm btn-primary" href="{{ route('contact') }}">Add New Contact</a>
-                        <button class="btn btn-primary btn-sm btn-info">Contact({{ $total }})</button>
+                        <a class="btn btn-primary btn-sm btn-info" href="">Contact({{ $total }})</a>
                     </div>
                     @if (session('success'))
                         <div class="alert alert-success">
                             {{ session('success') }}
                         </div>
                     @endif
-                    <table class="table table-striped table-dark">
+                    <table class="table table-striped table-dark" id="contactTable">
                         <thead>
                             <tr>
                                 <th scope="col">First Name</th>
@@ -65,23 +65,28 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($contacts as $contact)
-                                <tr>
-                                    <td>{{ $contact->first_name }}</td>
-                                    <td>{{ $contact->last_name }}</td>
-                                    <td>{{ $contact->phone_number }}</td>
-                                    <td>
-                                        <a class="btn btn-primary btn-sm"
-                                            href="{{ route('edit.contact', Crypt::encryptString($contact->id)) }}">Edit</a>
-                                        <a class="btn btn-primary btn-sm btn-success"
-                                            href="{{ route('view.contact', Crypt::encryptString($contact->id)) }}">View</a>
-                                        <a class="btn btn-primary btn-sm btn-danger"
-                                            href="{{ route('delete.contact', Crypt::encryptString($contact->id)) }}">Delete</a>
-                                    </td>
-                                </tr>
+                            @foreach ($contacts as $index => $contact)
+                                @if ($index < 10)
+                                    <tr>
+                                        <td>{{ $contact->first_name }}</td>
+                                        <td>{{ $contact->last_name }}</td>
+                                        <td>{{ $contact->phone_number }}</td>
+                                        <td>
+                                            <a class="btn btn-primary btn-sm"
+                                                href="{{ route('edit.contact', Crypt::encryptString($contact->id)) }}">Edit</a>
+                                            <a class="btn btn-primary btn-sm btn-success"
+                                                href="{{ route('view.contact', Crypt::encryptString($contact->id)) }}">View</a>
+                                            <a class="btn btn-primary btn-sm btn-danger"
+                                                href="{{ route('delete.contact', Crypt::encryptString($contact->id)) }}">Delete</a>
+                                        </td>
+                                    </tr>
+                                @endif
                             @endforeach
                         </tbody>
                     </table>
+                    <div style="margin:0 auto; width:20%">
+                        <a class="btn btn-sm btn-primary" href="">Show All</a>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-2">
