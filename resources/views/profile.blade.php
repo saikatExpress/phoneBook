@@ -29,42 +29,40 @@
                     <div id="myModal" class="myModal">
                         <div class="modal-content">
                             <span id="close" class="close">&times;</span>
-                            <h2>Edit Profile</h2>
-
-                            <form action="" method="post" enctype="multipart/form-data">
+                            <h2 class="smart-heading">Edit Profile</h2>
+                            <form style="width:100%" action="" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form_view">
                                     <label for="images">Upload your image</label> <br>
-                                    <input type="file" name="images">
+                                    <input class="smart-input" type="file" name="images">
                                 </div>
 
                                 <div class="form_view">
                                     <label for="names">Add your father name</label> <br>
-                                    <input type="text" name="father_name">
+                                    <input class="smart-input" type="text" name="father_name">
                                 </div>
 
                                 <div class="form_view">
                                     <label for="names">Add your mother name</label> <br>
-                                    <input type="text" name="mother_name">
+                                    <input class="smart-input" type="text" name="mother_name">
                                 </div>
 
                                 <div class="form_view">
                                     <label for="names">Add your Current City</label> <br>
-                                    <input type="text" name="city">
+                                    <input class="smart-input" type="text" name="city">
                                 </div>
 
                                 <div class="form_view">
                                     <label for="names">Add your Home Town</label> <br>
-                                    <input type="text" name="town">
+                                    <input class="smart-input" type="text" name="town">
                                 </div>
 
                                 <div class="form_view">
                                     <label for="names">Add your School</label> <br>
-                                    <input type="text" name="school">
+                                    <input class="smart-input" type="text" name="school">
                                 </div>
 
-                                <div class="form_view">
-                                    {{-- <button type="submit">Save</button> --}}
+                                <div class="form_view_button">
                                     <x-input-button></x-input-button>
                                 </div>
                             </form>

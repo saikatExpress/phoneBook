@@ -191,7 +191,7 @@ p {
     float: left;
     /* font-size: 28px; */
     /* font-weight: bold; */
-    width: 50%;
+    width: 35%;
     left: 32%;
 }
 
@@ -205,6 +205,64 @@ p {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.form_view label {
+    margin-left: 15px;
+    margin-bottom: 0;
+    font-size: 17px;
+    color: #000;
+}
+
+.form_view input[type="file"] {
+    padding: 5px;
+    margin: 15px 15px 15px;
+    width: 90%;
+}
+
+/* .form_view input[type="text"] {
+    padding: 5px;
+    margin: 15px 15px 15px;
+    width: 90%;
+} */
+
+.smart-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.smart-input {
+    padding: 10px;
+    border: none;
+    width: 90%;
+    border-radius: 5px;
+    margin: 15px 15px 15px;
+    box-shadow: 0 2px 5px rgba(78, 14, 196, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.smart-input:focus {
+    outline: none;
+    box-shadow: 0 4px 8px rgba(187, 13, 13, 0.1);
+}
+
+.smart-input::placeholder {
+    color: #aaa;
+}
+
+.smart-input:hover {
+    box-shadow: 0 4px 8px rgba(201, 13, 13, 0.1);
+}
+
+.form_view_button {
+    width: 30%;
+    margin: 0 auto;
+    padding: 5px 8px 5px;
 }
 
 /**Footer CSS start from here**/
