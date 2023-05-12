@@ -1,16 +1,23 @@
 @extends('master')
 @section('content')
     <div class="container">
-        <div class="greeting_div">
-            <h2 class="text-center fs-1 fw-bold font-monospace">Welcome to Phone Book World</h2>
-            <p class="text-center fs-6 lh-lg">
-                A phonebook project is the best practice,for learning CRUD operation.If you want to clear your concept about
-                CRUD operation,phonebook project is the best choice for learnig this mechanism.Most of web application has
-                must CRUD operation.So it's the right time to practice and learning CRUD operation with Laravel and Mysql.If
-                you are first in web programmer,i can suggest you to,firstly you practice raw php code in variours site.Like
-                <a href="https://www.w3schools.com/">W3School</a>,<a href="https://www.youtube.com/">Youtube</a> and
-                others.Trying to learn basic to core php coding and make a clear concept about php and programing.
-            </p>
+
+        <div class="row">
+            <div class="greeting_div">
+                <h2 class="text-center fs-1 fw-bold font-monospace">Welcome to Phone Book World</h2>
+                <p class="text-center fs-6 lh-lg">
+                    A phonebook project is the best practice,for learning CRUD operation.If you want to clear your concept
+                    about
+                    CRUD operation,phonebook project is the best choice for learnig this mechanism.Most of web application
+                    has
+                    must CRUD operation.So it's the right time to practice and learning CRUD operation with Laravel and
+                    Mysql.If
+                    you are first in web programmer,i can suggest you to,firstly you practice raw php code in variours
+                    site.Like
+                    <a href="https://www.w3schools.com/">W3School</a>,<a href="https://www.youtube.com/">Youtube</a> and
+                    others.Trying to learn basic to core php coding and make a clear concept about php and programing.
+                </p>
+            </div>
         </div>
 
         <div class="phonebook_div">

@@ -15,6 +15,7 @@ class Contact extends Model
         'last_name',
         'phone_number',
         'address',
+        'user_id',
         'created_at',
         'updated_at',
         'deleted_at'
@@ -26,6 +27,7 @@ class Contact extends Model
         'last_name'    => 'string',
         'phone_number' => 'string',
         'address'      => 'string',
+        'user_id'      => 'integer',
         'created_at'   => 'datetime',
         'updated_at'   => 'datetime',
         'deleted_at'   => 'datetime'
