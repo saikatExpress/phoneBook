@@ -76,6 +76,16 @@ class UserController extends Controller
         return view('about');
     }
 
+    public function userDetails(Request $request)
+    {
+        $image = $request->file('images');
+        $fatherName = $request->input('father_name');
+        $motherName = $request->input('mother_name');
+        $city = $request->input('city');
+        $town = $request->input('town');
+        $school = $request->input('school');
+    }
+
     public function logout()
     {
         Auth::logout();

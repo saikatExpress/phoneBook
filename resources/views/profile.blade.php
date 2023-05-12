@@ -30,7 +30,8 @@
                         <div class="modal-content">
                             <span id="close" class="close">&times;</span>
                             <h2 class="smart-heading">Edit Profile</h2>
-                            <form style="width:100%" action="" method="post" enctype="multipart/form-data">
+                            <form style="width:100%" action="{{ route('userDetail.us') }}" method="post"
+                                enctype="multipart/form-data">
                                 @csrf
                                 <div class="form_view">
                                     <label for="images">Upload your image</label> <br>

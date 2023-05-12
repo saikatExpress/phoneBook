@@ -29,8 +29,8 @@ class UserDetail extends Model
         'home_town'      => 'string',
         'school'         => 'string',
         'user_id'        => 'integer',
-        'created_at'     => 'datetime',
-        'updated_at'     => 'datetime',
-        'deleted_at'     => 'datetime',
+        'created_at'     => 'datetime:Y-m-d H:i:s',
+        'updated_at'     => 'datetime:Y-m-d H:i:s',
+        'deleted_at'     => 'datetime:Y-m-d H:i:s',
     ];
 }

@@ -29,6 +29,7 @@ Route::middleware(['auth'])->group(function () {
     //For user profile
     Route::get('/profile', [UserController::class, 'profile'])->name('profile');
     Route::get('/about', [UserController::class, 'about'])->name('about.us');
+    Route::post('/user/details', [UserController::class, 'userDetails'])->name('userDetail.us');
 
     //For contact
     Route::post('/create/contact', [ContactController::class, 'createContact'])->name('create.contact');
