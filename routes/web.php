@@ -30,6 +30,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [UserController::class, 'profile'])->name('profile');
     Route::get('/about', [UserController::class, 'about'])->name('about.us');
     Route::post('/user/details', [UserController::class, 'userDetails'])->name('userDetail.us');
+    Route::get('/user/contacts', [UserController::class, 'viewAllContact'])->name('allContact.us');
 
     //For contact
     Route::post('/create/contact', [ContactController::class, 'createContact'])->name('create.contact');

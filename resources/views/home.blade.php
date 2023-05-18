@@ -49,7 +49,8 @@
                         </div>
                         <div class="new_div">
                             <a class="btn btn-primary btn-sm btn-primary" href="{{ route('contact') }}">Add New Contact</a>
-                            <a class="btn btn-primary btn-sm btn-info" href="">Contact({{ $total }})</a>
+                            <a class="btn btn-primary btn-sm btn-info"
+                                href="{{ route('allContact.us') }}">Contact({{ $total }})</a>
                         </div>
                         @if (session('success'))
                             <div class="alert alert-success">
@@ -86,7 +87,7 @@
                             </tbody>
                         </table>
                         <div style="margin:0 auto; width:20%">
-                            <a class="btn btn-sm btn-primary" href="">Show All</a>
+                            <a class="btn btn-sm btn-primary" href="{{ route('allContact.us') }}">Show All</a>
                         </div>
                     </div>
                 </div>

@@ -225,6 +225,13 @@ nav button {
 .user_profile_block button {
     margin-left: 4.3rem;
 }
+
+.new_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
 /* Main body CSS end From here */
 
 /**Modal CSS start from here**/

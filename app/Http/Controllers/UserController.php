@@ -104,6 +104,16 @@ class UserController extends Controller
         $userDetailModel->save();
     }
 
+    public function viewAllContact()
+    {
+        $id = Auth::id();
+        $contacts = DB::table('contacts')->where('user_id', $id)->orderBy('first_name', 'asc')->get();
+
+        if (count($contacts)) {
+            return view('allContact', compact('contacts'));
+        }
+    }
+
     public function logout()
     {
         Auth::logout();
