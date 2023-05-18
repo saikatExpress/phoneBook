@@ -232,6 +232,13 @@ nav button {
     align-items: center;
     padding: 0.5rem;
 }
+
+.contactList {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
 /* Main body CSS end From here */
 
 /**Modal CSS start from here**/

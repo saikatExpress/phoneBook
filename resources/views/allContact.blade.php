@@ -27,7 +27,6 @@
     <div class="container">
         <section>
             <h4 class="border-bottom">All Contact</h4>
-
             <table>
                 <thead>
                     <tr>

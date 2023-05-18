@@ -23,17 +23,22 @@
                 </div>
 
                 <div class="col-sm-8">
+                    @if (count($profile))
+                        @foreach ($profile as $prof)
+                            <img class="profile_img" src="{{ asset('storage/' . $prof->profile_images) }}"
+                                alt="Profile image">
 
-                    @foreach ($profile as $prof)
-                        <img class="profile_img" src="{{ asset('storage/' . $prof->profile_images) }}" alt="Profile image">
-                        @if ($profile)
                             <div class="user_profile_block">
                                 <h2>{{ Auth::user()->name }}</h2>
                                 <h4>{{ $prof->home_town }}</h4>
                                 <button id="modalButton" class="btn btn-sm btn-primary" type="button" name="button">Edit
                                     Profile</button>
                             </div>
-
+                            @if (session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
                             {{-- =========Edit Profile Modal HTML code start from here============= --}}
                             <div class="modalBody">
                                 <div id="myModal" class="myModal">
@@ -89,18 +94,17 @@
                                     </div>
                                 </div>
                             </div>
-
                             {{-- =========Edit Profile Modal HTML code end from here============= --}}
-                        @else
-                            <div class="user_profile_block">
-                                <h2>{{ Auth::user()->name }}</h2>
-                                <button id="modalButton-1" class="btn btn-sm btn-primary" type="button" name="button">Add
-                                    Details</button>
-                            </div>
-                        @endif
-                    @endforeach
-
-                    {{-- =========Add details Modal HTML code start from here============= --}}
+                        @endforeach
+                    @else
+                        {{-- =========Add details Modal HTML code start from here============= --}}
+                        <img class="profile_img" src="{{ asset('logos/demo.jpg') }}" alt="Profile image">
+                        <div class="user_profile_block">
+                            <h2>{{ Auth::user()->name }}</h2>
+                            <button id="modalButton-1" class="btn btn-sm btn-primary" type="button" name="button">Add
+                                Details</button>
+                        </div>
+                    @endif
                     <div class="modalBody">
                         <div id="myModal1" class="myModal">
                             <div class="modal-content">
@@ -178,8 +182,9 @@
             }
         };
         //    ==========Edit Profile Modal JS code end from here==========
+    </script>
 
-
+    <script>
         //    ==========Add Details Profile Modal JS code start from here==========
         var myModal1 = document.getElementById("myModal1");
         var modalButton1 = document.getElementById("modalButton-1");

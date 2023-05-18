@@ -78,6 +78,7 @@ class UserController extends Controller
         return view('about');
     }
 
+    // ===========User Details Create function start from here=========
     public function userDetails(Request $request)
     {
         $id = Auth::id();
@@ -103,6 +104,7 @@ class UserController extends Controller
 
         $userDetailModel->save();
     }
+    // ===========User Details Create function end from here=========
 
     public function viewAllContact()
     {
@@ -113,6 +115,37 @@ class UserController extends Controller
             return view('allContact', compact('contacts'));
         }
     }
+
+
+    // ==========User Profile Update Function start here===========
+    public function userDetailsUpdate(Request $request)
+    {
+        $id = Auth::id();
+
+        $image      = $request->file('images');
+        $fatherName = $request->input('father_name');
+        $motherName = $request->input('mother_name');
+        $city       = $request->input('city');
+        $town       = $request->input('town');
+        $school     = $request->input('school');
+
+        $imagePath = $image->store('images', 'public');
+
+        $data = array(
+            'profile_images' => $imagePath,
+            'father_name'    => $fatherName,
+            'mother_name'    => $motherName,
+            'current_city'   => $city,
+            'home_town'      => $town,
+            'school'         => $school
+        );
+
+        $res = DB::table('user_details')->where('user_id', $id)->update($data);
+        if($res){
+            return back()->with('success', 'User update successfully');
+        }
+    }
+    // ==========User Profile Update Function end here===========
 
     public function logout()
     {
