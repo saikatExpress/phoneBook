@@ -239,6 +239,32 @@ nav button {
     margin: 0.5rem;
     padding: 0.5rem;
 }
+
+.contact_info {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contact_info img {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact_details {
+    margin-top: 0.5rem;
+}
+
+.contact_details button {
+    margin-left: 15rem;
+}
+
+.contact_details h4 {
+    text-align: center;
+}
 /* Main body CSS end From here */
 
 /**Modal CSS start from here**/

@@ -94,8 +94,11 @@ class ContactController extends Controller
 
     public function show($id)
     {
+        $user = Auth::id();
         $id = Crypt::decryptString($id);
+
         $contact = DB::table('contacts')->where('id', $id)->get();
-        return view('showContact',['contact'=>$contact]);
+        $contactDetails = DB::table('contact_details')->where('contact_id', $id)->where('user_id', $user)->get();
+        return view('showContact', compact('contact', 'contactDetails'));
     }
 }

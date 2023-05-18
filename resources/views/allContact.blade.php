@@ -35,6 +35,7 @@
                         <th>Last Name</th>
                         <th>Phone Number</th>
                         <th>Address</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,6 +46,14 @@
                             <td>{{ $contact->last_name }}</td>
                             <td>{{ $contact->phone_number }}</td>
                             <td>{{ $contact->address }}</td>
+                            <td>
+                                <a class="btn btn-primary btn-sm"
+                                    href="{{ route('edit.contact', Crypt::encryptString($contact->id)) }}">Edit</a>
+                                <a class="btn btn-primary btn-sm btn-success"
+                                    href="{{ route('view.contact', Crypt::encryptString($contact->id)) }}">View</a>
+                                <a class="btn btn-primary btn-sm btn-danger"
+                                    href="{{ route('delete.contact', Crypt::encryptString($contact->id)) }}">Delete</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
