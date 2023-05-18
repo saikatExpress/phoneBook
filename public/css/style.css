@@ -140,8 +140,6 @@ nav button {
 
 .contactNumber:hover {
     background-color: aqua;
-    transform: rotateY(360deg);
-    transition-duration: 1.2s;
 }
 
 .contactNumber h2 {
@@ -176,6 +174,56 @@ nav button {
     width: 300px;
     margin: 0.5rem;
     padding: 0.5rem;
+}
+
+.myInfo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.project_title {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.myImg img {
+    width: 100%;
+}
+
+.aboutPara {
+    position: relative;
+    top: 10%;
+}
+
+.para_padding {
+    margin-top: 2.5rem;
+}
+
+.aboutPara p {
+    text-align: justify;
+    line-height: 2.5rem;
+}
+
+.profile_img {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+}
+
+.user_profile_block {
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.user_profile_block h4 {
+    text-align: center;
+    color: var(--font);
+}
+
+.user_profile_block button {
+    margin-left: 4.3rem;
 }
 /* Main body CSS end From here */
 
@@ -279,6 +327,8 @@ nav button {
 .form-control:focus {
     background: #fff;
 }
+
+/* Modal CSS code end from here */
 
 /**Footer CSS start from here**/
 

@@ -69,7 +69,8 @@ class UserController extends Controller
     {
         $user = Auth::id();
         $contacts = DB::table('contacts')->where('user_id', $user)->orderBy('first_name', 'asc')->take(5)->get();
-        return view('profile', compact('contacts'));
+        $profile = DB::table('user_details')->where('user_id', $user)->orderBy('id', 'desc')->take(1)->get();
+        return view('profile', compact('contacts', 'profile'));
     }
 
     public function about()

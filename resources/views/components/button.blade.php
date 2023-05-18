@@ -1,3 +1,3 @@
-<div>
-    <button class="btn btn-sm btn-primary" type="button" id="modalButton" name="button">{{ $text }}</button>
-</div>
+{{-- <div>
+    <button class="btn btn-sm btn-primary" type="button" name="button">{{ $text }}</button>
+</div> --}}
